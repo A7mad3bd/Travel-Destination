@@ -1,22 +1,22 @@
 import './App.css';
 import Home from './components/home/Home'
-import data from './data/db.json'
-import Tours from './components/tours/Tours';
-
+import Header from './components/header/Header'
+import Footer from './components/footer/Footer'
+import TourDetails from './components/TourDetails/TourDetails';
 import { Routes, Route } from 'react-router-dom';
 
-//import Routes
 function App() {
   return (
     <>
+      <Header />
 
-    
-           <Routes>
-          <Route path='/' element={<Home/>} />
-          <Route path='/city/:id' element={ <Tours data={data} /> }/> 
-         </Routes> 
-         
-        
+      <Routes >
+        <Route path='/' element={<Home />}> </Route>
+        <Route path='/city/:id' element={<TourDetails />}> </Route>
+      </Routes>
+
+      <Footer />
+
 
     </>
   );
